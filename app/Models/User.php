@@ -48,5 +48,12 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    
+    public static function getUserInfo($user_id) {
+        $user_info = DB::table('users')
+             ->select('users.id', 'users.f_name', 'users.l_name', 'users.troop_id', 'users.council_id', 'users.email')
+            ->where("users.id", "=", $user_id)
+            ->get();
+        
+        return $user_info;
+    }
 }

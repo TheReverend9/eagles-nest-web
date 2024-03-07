@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/TroopFeed/{troop_id}', [FeedController::class, 'showTroopPosts']) ->middleware('auth');
+Route::get('/Troop/{troop_id}/Feed', [FeedController::class, 'showTroopPosts']) ->middleware('auth');
 
-Route::get('/TroopFeed/createPost/{troop_id}', [FeedController::class, 'createTroopPost']) ->middleware('auth');
+Route::get('/Troop/{troop_id}/CreatePost', [FeedController::class, 'createTroopPost']) ->middleware('auth');
 
 Route::post('/FeedPage', [FeedController::class, 'storePost']);
 

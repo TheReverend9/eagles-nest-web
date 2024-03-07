@@ -16,8 +16,8 @@ class posts extends Model
             ->join('troops', 'troops.troop_id', '=', 'users.troop_id')
             ->select('*')
             ->where("troops.troop_id", "=", $troop_id)
+            ->orderByDesc('id')
             ->get();
-        
         return $troopPosts;
     }
 

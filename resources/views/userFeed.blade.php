@@ -1,8 +1,9 @@
 <?php
 use Illuminate\Support\Facades\Auth;
-$user = Auth::user();
-$troop_id = $user['troop_id'];
-$createStr = "/TroopFeed/createPost/".$troop_id;
+use App\Models\User;
+
+$troop_id = Session('troop_id');
+$createStr = "/Troop/" . $troop_id . "/createPost/";
 ?>
 
 @extends('layout')

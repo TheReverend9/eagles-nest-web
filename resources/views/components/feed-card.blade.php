@@ -1,5 +1,11 @@
 @props(['post'])
 
+<?php
+$date = new DateTime($post->creation_date);
+$creation_date = $date->format('M d, Y h:i a');
+
+?>
+
 <div class="user-feed-posts">
     <form class="hidden">
         
@@ -17,7 +23,7 @@
                 </h3>
                 @if($post->troop_number != 0)
                     <h3 class="margin-left-10 text-xl font-medium">
-                        <a>Troop {{$post->troop_number}}</a>
+                        <a class="text-accent">Troop {{$post->troop_number}}</a>
                     </h3>
                 @endif
             </div>
@@ -25,31 +31,35 @@
                 <div class="width-max-100">
                     <ul class="menu bg-primary-content rounded-box user-feed-posts-navbar">
                         <li>
-                        <button class="btn-no-hover" id="like">
-                            <span class="material-symbols-outlined">
-                                thumb_up
-                            </span>
-                        </button>
+                            <button class="btn-no-hover" id="like">
+                                <span class="material-symbols-outlined">
+                                    thumb_up
+                                </span>
+                            </button>
                         </li>
                         <li>
-                        <button class="btn-no-hover" id="comment">
-                            <span class="material-symbols-outlined">
-                                comment
-                            </span>
-                        </button>
+                            <button class="btn-no-hover" id="comment">
+                                <span class="material-symbols-outlined">
+                                    comment
+                                </span>
+                            </button>
                         </li>
                         <li>
-                        <button class="btn-no-hover" id="share">
-                            <span class="material-symbols-outlined">
-                                share
-                            </span>
-                        </button>
+                            <button class="btn-no-hover" id="share">
+                                <span class="material-symbols-outlined">
+                                    share
+                                </span>
+                            </button>
                         </li>
                     </ul>
                 </div>
+
                 <div class="user-feed-posts-content">
                     {{$post->content}}
+                    <p class="text-xs object-none object-bottom">{{$creation_date}}</p>
+
                 </div>
+
             </div>
         </div>
     </div>
