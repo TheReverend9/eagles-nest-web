@@ -11,9 +11,9 @@ class State extends Model
     use HasFactory;
 
     public static function getstateInfo($state_id) {
-        $stateInfo = DB::table('state')
+        $stateInfo = DB::table('states')
             ->select('*')
-            ->where("state.state_id", "=", $state_id)
+            ->where("states.state_id", "=", $state_id)
             ->get();
         
         return $stateInfo;

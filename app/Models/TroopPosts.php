@@ -10,4 +10,11 @@ class TroopPosts extends Model
     use HasFactory;
 
     public $timestamps=false;
+
+    protected $fillable = [
+        'user_id',
+        'troop_id',
+        'council_id',
+        'state_id'
+    ];
 }

@@ -11,9 +11,9 @@ class Country extends Model
     use HasFactory;
 
     public static function getCountryInfo($country_id) {
-        $countryInfo = DB::table('country')
+        $countryInfo = DB::table('countries')
             ->select('*')
-            ->where("country.country_id", "=", $country_id)
+            ->where("countries.country_id", "=", $country_id)
             ->get();
         
         return $countryInfo;

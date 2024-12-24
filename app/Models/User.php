@@ -23,6 +23,9 @@ class User extends Authenticatable
         'f_name',
         'l_name',
         'troop_id',
+        'phone_id',
+        'troop_role_id',
+        'troop_rank_id',
         'council_id',
         'email',
         'password',
@@ -50,7 +53,7 @@ class User extends Authenticatable
 
     public static function getUserInfo($user_id) {
         $user_info = DB::table('users')
-             ->select('users.id', 'users.f_name', 'users.l_name', 'users.troop_id', 'users.council_id', 'users.email')
+            ->select('users.id', 'users.f_name', 'users.l_name', 'users.troop_id', 'users.troop_role_id', 'users.troop_rank_id', 'users.phone_id', 'users.email')
             ->where("users.id", "=", $user_id)
             ->get();
         

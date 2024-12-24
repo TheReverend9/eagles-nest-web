@@ -8,11 +8,16 @@
         @vite('resources/css/app.css')
         <title>Eagle's Nest</title>
         
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
    
     </head>
     <body class="">
-        @include('partials._navbar')
+        @include('partials._navbarHome')
         {{-- VIEW OUTPUT --}}
         @yield('content')
     </body>
+        
+        
 </html>

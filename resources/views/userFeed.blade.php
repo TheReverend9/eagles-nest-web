@@ -3,16 +3,16 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
 $troop_id = Session('troop_id');
-$createStr = "/Troop/" . $troop_id . "/createPost/";
+$title = "Troop " . Session('troop_number') . " Feed";
+$createStr = "/Troop/" . $troop_id . "/CreatePost";
 ?>
 
-@extends('layout')
+@extends('/layouts/layout')
 
 @section('content')
-
-<div class="">
+<x-page-title :title="$title" />
+<div class="pb-20">
     @if(count($posts) == 0)
-        <h3>Sorry, nothing is in your feed!</h3>
     
     @else
         @foreach($posts as $post)

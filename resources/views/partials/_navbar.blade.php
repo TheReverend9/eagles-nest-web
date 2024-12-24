@@ -1,6 +1,6 @@
 <div class="navbar bg-primary">
     <div class="flex-1">
-    <a class="btn btn-ghost text-xl bg-primary-hover text-primary-content">Eagle's Nest</a>
+    <a class="btn btn-ghost text-xl bg-primary-hover text-primary-content" href="/">Eagle's Nest</a>
     </div>
     <div class="flex-none gap-2">
         <div class="form-control">
@@ -9,7 +9,7 @@
         <div class="dropdown dropdown-end">
             <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
             <div class="w-10 rounded-full">
-                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img alt="Tailwind CSS Navbar component" src="" />
             </div>
             </div>
             <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
